@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Update Record</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Update Record</h1>
+
+<form method="POST">
+
+<input type="number"
+name="units"
+value="{{ record.Units_Used }}"
+required>
+
+<input type="number"
+name="bill"
+value="{{ record.Bill_Amount }}"
+required>
+
+<button class="btn">
+Update
+</button>
+
+</form>
+
+<br>
+
+<a href="/view"
+class="btn">
+Back
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

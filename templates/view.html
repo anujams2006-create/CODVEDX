@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Records</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Utility Records</h1>
+
+<table>
+    <tr>
+        <th>Month & Year</th>
+        <th>Units Used</th>
+        <th>Bill Amount</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row.Month_Year }}</td>
+        <td>{{ row.Units_Used }}</td>
+        <td>₹{{ row.Bill_Amount }}</td>
+
+        <td>
+            <a href="/edit/{{ loop.index0 }}" class="btn-edit">
+                Edit
+            </a>
+
+            <a href="/delete/{{ loop.index0 }}"
+               class="btn-delete"
+               onclick="return confirm('Delete this record?')">
+                Delete
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="/dashboard" class="btn">
+Back
+</a>
+
+</div>
+
+</body>
+</html>

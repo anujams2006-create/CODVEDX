@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Record</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Edit Utility Record</h1>
+
+    <form method="POST">
+
+        <label>Month & Year</label>
+
+        <input
+            type="text"
+            name="month"
+            value="{{ record.Month_Year }}"
+            required>
+
+        <label>Units Used</label>
+
+        <input
+            type="number"
+            name="units"
+            value="{{ record.Units_Used }}"
+            required>
+
+        <button type="submit">
+            Update Record
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/view" class="btn-edit">
+        Back to Records
+    </a>
+
+</div>
+
+</body>
+</html>

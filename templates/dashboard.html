@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+⚡ Utility Usage Prediction Dashboard
+</h1>
+<p style="text-align:center;color:white;font-size:18px;">
+Monitor Utility Consumption, Manage Records,
+and Predict Future Bills using Machine Learning.
+</p>
+    <div class="cards">
+
+        <div class="stat-card">
+            <h2>{{ total_records }}</h2>
+            <p>Total Records</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>{{ avg_units }}</h2>
+            <p>Average Units</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>₹{{ max_bill }}</h2>
+            <p>Highest Bill</p>
+        </div>
+
+    </div>
+
+    <div class="menu">
+
+        <a href="/add" class="btn">
+            Add Data
+        </a>
+
+        <a href="/view" class="btn">
+            View Records
+        </a>
+
+        <a href="/predict" class="btn">
+            Predict Bill
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

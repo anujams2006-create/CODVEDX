@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Prediction</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Predict Bill</h1>
+
+<form method="POST">
+
+<input
+type="number"
+name="units"
+placeholder="Enter Units Used"
+required>
+
+<button type="submit" class="main-btn">Predict</button>
+
+</form>
+
+{% if result %}
+
+<div class="prediction-box">
+
+Predicted Bill Amount
+
+<h2>
+
+₹ {{ result }}
+
+</h2>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

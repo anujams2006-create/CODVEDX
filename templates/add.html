@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Usage Data</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Add Utility Data</h1>
+
+    <form method="POST">
+
+    <label>Select Month</label>
+    <select name="month" required>
+        <option value="">Choose Month</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+    </select>
+
+    <label>Select Year</label>
+    <select name="year" required>
+        <option value="">Choose Year</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+        <option>2028</option>
+    </select>
+
+    <label>Units Used</label>
+    <input type="number" name="units" min="1" required>
+
+    <button type="submit" class="main-btn">Save Data</button>
+
+</form>
+</div>
+
+</body>
+</html>
